@@ -1,27 +1,41 @@
+# Docker 部署AppSpace文档
 
-/usr/local/Homebrew/etc/nginx/nginx.conf
 
-sudo nginx -s reload
-nginx -t
-nginx -s reload
-service nginx restart
+## 版本列表
 
-brew services start nginx    # 启动
-nginx -c /usr/local/Homebrew/etc/nginx/nginx.conf    # 首先利用配置文件启动nginx
-brew services stop nginx     # 停止
-service nginx restart        # 重启
-nginx -h                     # 查看帮助信息
-nginx -v                     # 查看nginx版本(小写字母v)
-nginx -V                     # 除版本信息外还显示配置参数信息(大写字母V)
-start nginx                  # 启动nginx
-start nginx -c filename      # 指定配置文件启动nginx
-nginx -s quit                # 关闭nginx，完整有序的停止nginx，保存相关信息
-nginx -s stop                # 关闭nginx，快速停止nginx，可能并不保存相关信息
-nginx -s reload              # 重新载入nginx，当配置信息修改需要重新加载配置是使用
-nginx -s reopen              # 重新打开日志文件
-nginx -t -c filename         # 测试nginx配置文件是否正确
-systemctl stop nginx.service       # linux停止
-systemctl start nginx.service      # linux启动
-ps aux | grep nginx                # 查看服务
-systemctl restart nginx.service    # 重启
-netstat -tlnp                      # 端口号
+- 稳定版本 - app-space/latest - `ghcr.io/appspa/app-space:latest`
+
+## 镜像仓库
+
+- Github Container Registry: https://github.com/appspa/app-space/pkgs/container/app-space (**推荐**)
+
+## 第一步
+### 安装 Docker
+
+按照[官方教程](https://get.docker.com/)安装
+
+[//]: # (### 安装 Docker-Compose)
+
+[//]: # ()
+[//]: # (按照[官方教程]&#40;https://docs.docker.com/compose/install/&#41;安装)
+
+## 第二步
+### 下载App-Space-docker
+```angular2html
+git clone https://github.com/appspa/app-space-docker.git
+```
+## 第三步
+### .env 配置
+自定义参数 例如:域名 存储
+
+## 第四步
+### 编译
+```angular2html
+docker-compose up -d --build
+```
+## 第五步
+### 访问
+[http://localhost/](http://localhost/)
+
+
+
