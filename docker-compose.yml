@@ -30,8 +30,8 @@ services:
 
   nginx:
      build:
-       context: ../
-       dockerfile: docker/nginx/Dockerfile
+       context: ./
+       dockerfile: nginx/Dockerfile
      container_name: app-space-nginx
      ports:
        - "80:80"
