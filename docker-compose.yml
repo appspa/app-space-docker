@@ -14,9 +14,8 @@ services:
       - server-net
 
   server:
-    build:
-    image: ghcr.io/appspa/app-space:latest
     container_name: app_space_server
+    image: ghcr.io/appspa/app-space:latest
     env_file: .env
     ports:
       - "8085:8085"
