@@ -38,6 +38,7 @@ docker-compose up -d --build
 
 [//]: # (或)
 [http://localhost/8085](http://localhost/8085)
+管理员账号:admin 密码：app@space
 
 
 
