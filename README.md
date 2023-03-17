@@ -23,7 +23,7 @@
 git clone https://github.com/appspa/app-space-docker.git
 ```
 ### 第三步：可自定义配置.env
-.env文件 可自定义参数 例如:域名 存储
+app-space-docker/.env文件 可自定义参数 例如:域名 存储
 
 ### 第四步：编译
 ```angular2html
